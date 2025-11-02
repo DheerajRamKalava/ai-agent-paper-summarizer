@@ -1,8 +1,8 @@
 # Academic Paper Summarizer AI Agent
 
-**Student:** Kalava Dheeraj Ram
-**University:** IIT Palakkad
-**Department:** Data Science
+**Student:** Kalava Dheeraj Ram  
+**University:** IIT Palakkad  
+**Department:** Data Science  
 **Email:** dheerajramkalava@gmail.com
 
 ---
@@ -196,7 +196,7 @@ See `docs/report.md` for detailed analysis.
 
 ## Contact
 
-**Kalava Dheeraj Ram**
-IIT Palakkad | Data Science
-Email: dheerajramkalava@gmail.com
+**Kalava Dheeraj Ram**  
+IIT Palakkad | Data Science  
+Email: dheerajramkalava@gmail.com  
 GitHub: https://github.com/DheerajRamKalava/ai-agent-paper-summarizer
