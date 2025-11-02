@@ -1,0 +1,13 @@
+transformers>=4.44.0
+torch>=2.0.0
+sentencepiece
+PyPDF2
+streamlit
+pyngrok
+accelerate
+datasets
+peft
+bitsandbytes
+trl
+rouge-score
+matplotlib

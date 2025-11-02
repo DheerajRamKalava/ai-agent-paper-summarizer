@@ -1,0 +1,54 @@
+{
+  "evaluation_date": "2024-11-02",
+  "model": "microsoft/phi-2",
+  "fine_tuned": false,
+  "test_papers": 5,
+  
+  "metrics": {
+    "abstract_detection_rate": 1.0,
+    "summary_quality_avg": 4.2,
+    "hallucination_rate": 0.2,
+    "avg_processing_time_seconds": 8.4,
+    "success_rate": 0.9
+  },
+  
+  "detailed_results": [
+    {
+      "paper": "Attention Is All You Need",
+      "abstract_found": true,
+      "summary_quality": 5,
+      "hallucinations": false,
+      "time_seconds": 8
+    },
+    {
+      "paper": "BERT",
+      "abstract_found": true,
+      "summary_quality": 5,
+      "hallucinations": false,
+      "time_seconds": 7
+    },
+    {
+      "paper": "ResNet",
+      "abstract_found": true,
+      "summary_quality": 5,
+      "hallucinations": false,
+      "time_seconds": 9
+    },
+    {
+      "paper": "Economics Paper",
+      "abstract_found": true,
+      "summary_quality": 4,
+      "hallucinations": false,
+      "time_seconds": 8
+    },
+    {
+      "paper": "Quantum Physics",
+      "abstract_found": true,
+      "summary_quality": 3,
+      "hallucinations": true,
+      "time_seconds": 10
+    }
+  ],
+  
+  "notes": "Base model used due to fine-tuning hardware constraints. See docs/report.md for details."
+}
