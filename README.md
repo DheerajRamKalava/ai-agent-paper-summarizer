@@ -63,7 +63,7 @@ streamlit run ui.py
 
 ## Demo (Google Colab)
 
-For a quick demo without local setup:
+For a quick demo without local setup (or) take a look at the Demo Pictures in folder "Demo" in the repository:
 
 1. Open Colab and run all setup cells
 2. Get ngrok token from https://dashboard.ngrok.com/signup
