@@ -53,16 +53,45 @@ This agent loads the `microsoft/phi-2` (2.7B) model. Running this on a local **C
 The intended way to run this project is on a **GPU**, such as the free T4 GPU provided by Google Colab.
 
 #### Running on Colab
-To run this project, you would need to:
-1.  Open a new Colab notebook and set the runtime to T4 GPU.
-2.  Clone the repository: `!git clone https://github.com/DheerajRamKalava/ai-agent-paper-summarizer.git`
-3.  Move into the folder: `%cd ai-agent-paper-summarizer`
-4.  Install dependencies: `!pip install -r requirements.txt`
-5.  Get a free `ngrok` token from `https://dashboard.ngrok.com/get-started/your-authtoken`.
-6.  Run: `!ngrok authtoken <YOUR_TOKEN_HERE>`
-7.  Launch the UI: `!streamlit run ui.py`
+To run this project, you would need to follow these steps in a new Colab notebook:
 
-After launching, click the `ngrok` link and select "Visit Site." The web app may take a minute to load the AI model. **If it continues to load for a long time, please refresh the page.** Once loaded, you can upload a PDF to see the summarization, just like in the demo screenshots.
+1.  **Set Runtime:**
+    * Go to `Runtime` > `Change runtime type` and select `T4 GPU`.
+
+2.  **Clone the Repository:**
+    ```bash
+    !git clone https://github.com/DheerajRamKalava/ai-agent-paper-summarizer.git
+    ```
+
+3.  **Move into Folder:**
+    ```python
+    %cd ai-agent-paper-summarizer
+    ```
+
+4.  **Install Dependencies:**
+    ```bash
+    !pip install -r requirements.txt
+    ```
+
+5.  **Authenticate `ngrok`:**
+    * Get a free token from `https://dashboard.ngrok.com/get-started/your-authtoken`.
+    ```bash
+    !ngrok authtoken <YOUR_TOKEN_HERE>
+    ```
+
+6.  **Launch the UI:**
+    * This command starts the server in the background and then prints the public link.
+    ```python
+    !streamlit run ui.py &>/dev/null&
+    from pyngrok import ngrok
+    import time
+    time.sleep(5) 
+    print("Click this link to see your UI:")
+    print(ngrok.connect(8501))
+    ```
+
+7.  **View the App:**
+    * Click the generated `ngrok` link and select "Visit Site." The app may take a minute to load the AI model. **If it continues to load for a long time, please refresh the page.** Once loaded, you can upload a PDF to see the summarization, just like in the demo screenshots.
 
 Given this complex setup, **viewing the demo screenshots in the `/demo/` folder is the recommended way to verify the working UI.**
 
