@@ -3,7 +3,7 @@
 **Student:** Kalava Dheeraj Ram  
 **University:** IIT Palakkad  
 **Department:** Data Science  
-**Email:** dheerajramkalava@gmail.com
+**Email:** 142301015@smail.iitpkd.ac.in | dheerajramkalava@gmail.com
 
 ---
 
@@ -36,39 +36,31 @@ Reading academic papers is time-consuming. A single paper can take 30-60 minutes
 
 ---
 
-## Quick Start (Local)
+## How to View the Demo
 
-### Prerequisites
-```bash
-Python 3.8+
-pip install -r requirements.txt
-```
+### Recommended: View the Demo Screenshots
 
-### Download Test Paper
-```bash
-curl -L -o test_paper.pdf https://arxiv.org/pdf/1706.03762.pdf
-```
-
-### Run Agent (CLI)
-```bash
-python src/agent.py --pdf test_paper.pdf
-```
-
-### Run Web UI
-```bash
-streamlit run ui.py
-```
+For a simple proof of concept, please see the screenshots of the working agent in the `/demo/` folder. This shows the final Streamlit UI successfully summarizing a paper.
 
 ---
 
-## Demo (Google Colab)
+### Alternative: How to Run (Hardware Required)
 
-For a quick demo without local setup (or) take a look at the Demo Pictures in folder "Demo" in the repository:
+#### Hardware Requirement: GPU is Necessary
 
-1. Open Colab and run all setup cells
-2. Get ngrok token from https://dashboard.ngrok.com/signup
-3. Run: `!ngrok authtoken YOUR_TOKEN`
-4. Launch UI and click the generated link
+This agent loads the `microsoft/phi-2` (2.7B) model. Running this on a local **CPU** is **not recommended** as it is extremely slow (can take **20-30+ minutes** for one summary).
+
+The intended way to run this project is on a **GPU**, such as the free T4 GPU provided by Google Colab.
+
+#### Running on Colab
+To run this project, you would need to:
+1.  Open a new Colab notebook and set the runtime to T4 GPU.
+2.  Clone the repository and install dependencies from `requirements.txt`.
+3.  Get a free `ngrok` token from `https://dashboard.ngrok.com/get-started/your-authtoken`.
+4.  Run: `!ngrok authtoken <YOUR_TOKEN_HERE>`
+5.  Launch the UI: `!streamlit run ui.py`
+
+Given this complex setup, **viewing the demo screenshots in the `/demo/` folder is the recommended way to verify the working UI.**
 
 ---
 
@@ -198,5 +190,5 @@ See `docs/report.md` for detailed analysis.
 
 **Kalava Dheeraj Ram**  
 IIT Palakkad | Data Science  
-Email: dheerajramkalava@gmail.com  
+Email: 142301015@smail.iitpkd.ac.in | dheerajramkalava@gmail.com  
 GitHub: https://github.com/DheerajRamKalava/ai-agent-paper-summarizer
