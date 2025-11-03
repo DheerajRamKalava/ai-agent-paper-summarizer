@@ -38,9 +38,17 @@ Reading academic papers is time-consuming. A single paper can take 30-60 minutes
 
 ## How to View the Demo
 
-### Recommended: View the Demo Screenshots
+### Recommended: Watch the Demo Video
 
-For a simple proof of concept, please see the screenshots of the working agent in the `/demo/` folder. This shows the final Streamlit UI successfully summarizing a paper.
+A full video demonstration of the working agent and UI is available at the link below.
+
+**[Click here to watch the Demo Video](https://youtu.be/qwDLpBbn1Zs)**
+
+---
+
+### Alternative: View the Demo Screenshots
+
+For a static proof of concept, please see the screenshots of the working agent in the `/demo/` folder.
 
 ---
 
@@ -91,9 +99,9 @@ To run this project, you would need to follow these steps in a new Colab noteboo
     ```
 
 7.  **View the App:**
-    * Click the generated `ngrok` link and select "Visit Site." The app may take a minute to load the AI model. **If it continues to load for a long time, please refresh the page.** Once loaded, you can upload a PDF to see the summarization, just like in the demo screenshots.
+    * Click the generated `ngrok` link and select "Visit Site." The app may take a minute to load the AI model. **If it continues to load for a long time, please refresh the page.** Once loaded, you can upload a PDF to see the summarization, just like in the demo.
 
-Given this complex setup, **viewing the demo screenshots in the `/demo/` folder is the recommended way to verify the working UI.**
+Given this complex setup, **viewing the demo video or screenshots in the `/demo/` folder is the recommended way to verify the working UI.**
 
 ---
 
