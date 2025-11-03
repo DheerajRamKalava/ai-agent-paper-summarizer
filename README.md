@@ -1,15 +1,15 @@
 # Academic Paper Summarizer AI Agent
 
-**Student:** Kalava Dheeraj Ram
-**University:** IIT Palakkad
-**Department:** Data Science
-**Email:** dheerajramkalava@gmail.com
+**Student:** Kalava Dheeraj Ram  
+**University:** IIT Palakkad  
+**Department:** Data Science  
+**Email:** 142301015@smail.iitpkd.ac.in | dheerajramkalava@gmail.com
 
 ---
 
 ## Project Overview
 
-This project implements an AI agent that automates the tedious task of reading and summarizing academic research papers. As a student, I spend significant time reading papers for coursework and research. This agent streamlines that process by:
+This project implements an AI agent that automates the manual task of reading and summarizing academic research papers. As a student, I spend significant time reading papers. This agent streamlines that process by:
 
 1. **Extracting** text from PDF papers
 2. **Identifying** the abstract/introduction intelligently
@@ -18,7 +18,7 @@ This project implements an AI agent that automates the tedious task of reading a
 
 ### Why This Task?
 
-Reading academic papers is time-consuming. A single paper can take 30-60 minutes to read thoroughly. This agent reduces that to 2-3 minutes while capturing the key ideas.
+Reading academic papers is time-consuming. A single paper can take 30-60 minutes to read thoroughly. This agent reduces that to 2-3 minutes only capturing the key ideas.
 
 ---
 
@@ -36,39 +36,64 @@ Reading academic papers is time-consuming. A single paper can take 30-60 minutes
 
 ---
 
-## Quick Start (Local)
+## How to View the Demo
 
-### Prerequisites
-```bash
-Python 3.8+
-pip install -r requirements.txt
-```
+### Recommended: View the Demo Screenshots
 
-### Download Test Paper
-```bash
-curl -L -o test_paper.pdf https://arxiv.org/pdf/1706.03762.pdf
-```
-
-### Run Agent (CLI)
-```bash
-python src/agent.py --pdf test_paper.pdf
-```
-
-### Run Web UI
-```bash
-streamlit run ui.py
-```
+For a simple proof of concept, please see the screenshots of the working agent in the `/demo/` folder. This shows the final Streamlit UI successfully summarizing a paper.
 
 ---
 
-## Demo (Google Colab)
+### Alternative: How to Run (Hardware Required)
 
-For a quick demo without local setup:
+#### Hardware Requirement: GPU is Necessary
 
-1. Open Colab and run all setup cells
-2. Get ngrok token from https://dashboard.ngrok.com/signup
-3. Run: `!ngrok authtoken YOUR_TOKEN`
-4. Launch UI and click the generated link
+This agent loads the `microsoft/phi-2` (2.7B) model. Running this on a local **CPU** is **not recommended** as it is extremely slow (can take **20-30+ minutes** for one summary).
+
+The intended way to run this project is on a **GPU**, such as the free T4 GPU provided by Google Colab.
+
+#### Running on Colab
+To run this project, you would need to follow these steps in a new Colab notebook:
+
+1.  **Set Runtime:**
+    * Go to `Runtime` > `Change runtime type` and select `T4 GPU`.
+
+2.  **Clone the Repository:**
+    ```bash
+    !git clone https://github.com/DheerajRamKalava/ai-agent-paper-summarizer.git
+    ```
+
+3.  **Move into Folder:**
+    ```python
+    %cd ai-agent-paper-summarizer
+    ```
+
+4.  **Install Dependencies:**
+    ```bash
+    !pip install -r requirements.txt
+    ```
+
+5.  **Authenticate `ngrok`:**
+    * Get a free token from `https://dashboard.ngrok.com/get-started/your-authtoken`.
+    ```bash
+    !ngrok authtoken <YOUR_TOKEN_HERE>
+    ```
+
+6.  **Launch the UI:**
+    * This command starts the server in the background and then prints the public link.
+    ```python
+    !streamlit run ui.py &>/dev/null&
+    from pyngrok import ngrok
+    import time
+    time.sleep(5) 
+    print("Click this link to see your UI:")
+    print(ngrok.connect(8501))
+    ```
+
+7.  **View the App:**
+    * Click the generated `ngrok` link and select "Visit Site." The app may take a minute to load the AI model. **If it continues to load for a long time, please refresh the page.** Once loaded, you can upload a PDF to see the summarization, just like in the demo screenshots.
+
+Given this complex setup, **viewing the demo screenshots in the `/demo/` folder is the recommended way to verify the working UI.**
 
 ---
 
@@ -124,6 +149,8 @@ paper-summarizer-agent/
 │   └── logs.md              # AI assistance logs
 ├── evaluation/
 │   └── results.json         # Evaluation metrics
+├── demo/
+│   └──                      # Screenshots of the working UI
 ├── ui.py                    # Streamlit web interface
 ├── requirements.txt         # Python dependencies
 └── README.md               # This file
@@ -196,7 +223,7 @@ See `docs/report.md` for detailed analysis.
 
 ## Contact
 
-**Kalava Dheeraj Ram**
-IIT Palakkad | Data Science
-Email: dheerajramkalava@gmail.com
+**Kalava Dheeraj Ram**  
+IIT Palakkad | Data Science  
+Email: 142301015@smail.iitpkd.ac.in | dheerajramkalava@gmail.com  
 GitHub: https://github.com/DheerajRamKalava/ai-agent-paper-summarizer
