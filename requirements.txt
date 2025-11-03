@@ -1,5 +1,5 @@
-transformers>=4.44.0
-torch>=2.0.0
+transformers
+torch
 sentencepiece
 PyPDF2
 streamlit
