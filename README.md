@@ -9,7 +9,7 @@
 
 ## Project Overview
 
-This project implements an AI agent that automates the tedious task of reading and summarizing academic research papers. As a student, I spend significant time reading papers for coursework and research. This agent streamlines that process by:
+This project implements an AI agent that automates the manual task of reading and summarizing academic research papers. As a student, I spend significant time reading papers. This agent streamlines that process by:
 
 1. **Extracting** text from PDF papers
 2. **Identifying** the abstract/introduction intelligently
@@ -18,7 +18,7 @@ This project implements an AI agent that automates the tedious task of reading a
 
 ### Why This Task?
 
-Reading academic papers is time-consuming. A single paper can take 30-60 minutes to read thoroughly. This agent reduces that to 2-3 minutes while capturing the key ideas.
+Reading academic papers is time-consuming. A single paper can take 30-60 minutes to read thoroughly. This agent reduces that to 2-3 minutes only capturing the key ideas.
 
 ---
 
@@ -55,10 +55,14 @@ The intended way to run this project is on a **GPU**, such as the free T4 GPU pr
 #### Running on Colab
 To run this project, you would need to:
 1.  Open a new Colab notebook and set the runtime to T4 GPU.
-2.  Clone the repository and install dependencies from `requirements.txt`.
-3.  Get a free `ngrok` token from `https://dashboard.ngrok.com/get-started/your-authtoken`.
-4.  Run: `!ngrok authtoken <YOUR_TOKEN_HERE>`
-5.  Launch the UI: `!streamlit run ui.py`
+2.  Clone the repository: `!git clone https://github.com/DheerajRamKalava/ai-agent-paper-summarizer.git`
+3.  Move into the folder: `%cd ai-agent-paper-summarizer`
+4.  Install dependencies: `!pip install -r requirements.txt`
+5.  Get a free `ngrok` token from `https://dashboard.ngrok.com/get-started/your-authtoken`.
+6.  Run: `!ngrok authtoken <YOUR_TOKEN_HERE>`
+7.  Launch the UI: `!streamlit run ui.py`
+
+After launching, click the `ngrok` link and select "Visit Site." The web app may take a minute to load the AI model. **If it continues to load for a long time, please refresh the page.** Once loaded, you can upload a PDF to see the summarization, just like in the demo screenshots.
 
 Given this complex setup, **viewing the demo screenshots in the `/demo/` folder is the recommended way to verify the working UI.**
 
@@ -116,6 +120,8 @@ paper-summarizer-agent/
 │   └── logs.md              # AI assistance logs
 ├── evaluation/
 │   └── results.json         # Evaluation metrics
+├── demo/
+│   └──                      # Screenshots of the working UI
 ├── ui.py                    # Streamlit web interface
 ├── requirements.txt         # Python dependencies
 └── README.md               # This file
