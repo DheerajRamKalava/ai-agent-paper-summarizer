@@ -94,7 +94,7 @@ To run this project, you would need to follow these steps in a new Colab noteboo
     from pyngrok import ngrok
     import time
     time.sleep(5) 
-    print("Click this link to see your UI:")
+    print("Click this link to view the UI:")
     print(ngrok.connect(8501))
     ```
 
