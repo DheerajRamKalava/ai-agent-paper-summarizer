@@ -20,15 +20,11 @@ This report documents the development, training, and evaluation of an AI agent f
 ## 2. Problem Statement
 
 ### The Manual Task
-As a data science student, I spend 5-10 hours per week reading academic papers. The process is:
-1. Download PDF (2 min)
-2. Skim through to find abstract (3 min)
-3. Read and understand abstract (5-10 min)
-4. Decide if paper is relevant (2 min)
+As a data science student, I spend 5-10 hours per week reading academic papers. The process is to spend time to skim through the whole pdf and decide if the paper is relevant.
 
 **Total**: 10-15 minutes per paper
 
-With 10 papers per week, that's **2.5 hours of repetitive work**.
+More the papers, more the time
 
 ### The Automated Solution
 An AI agent that:
@@ -96,8 +92,6 @@ LoraConfig(
 
 **Root Cause**: T4 GPU with 16GB VRAM is insufficient for fine-tuning 2.7B parameter models.
 
-**Industry Standard**: A100 (40GB) or H100 (80GB) recommended.
-
 **Decision**: Use base model with optimized prompting instead.
 
 ---
@@ -139,8 +133,7 @@ LoraConfig(
 Despite failing to fine-tune successfully, this project demonstrates:
 1. **Complete ML pipeline**: Data → Training → Evaluation → Deployment
 2. **Practical agent design**: Simple but effective
-3. **Honest documentation**: Report failures, not just successes
-4. **Production-ready code**: Handles errors, has UI, works on real data
+3. **Production-ready code**: Handles errors, has UI, works on real data
 
 ---
 
