@@ -113,7 +113,7 @@ Given this complex setup, **viewing the demo video or screenshots in the `/demo/
        │
        ▼
 ┌─────────────────────┐
-│   Agent (Planner)   │  ← Creates 4-step plan
+│   Agent (Planner)   │
 │  1. Extract Text    │
 │  2. Clean Text      │
 │  3. Summarize       │
@@ -125,7 +125,7 @@ Given this complex setup, **viewing the demo video or screenshots in the `/demo/
 │  Execution Loop     │
 ├─────────────────────┤
 │ → PDF Extractor     │  (PyPDF2)
-│ → Text Cleaner      │  (Pattern matching)
+│ → Text Cleaner      │
 │ → AI Summarizer     │  (Phi-2 model)
 │ → Output Formatter  │
 └──────┬──────────────┘
